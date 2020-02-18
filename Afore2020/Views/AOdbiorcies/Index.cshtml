@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Afore2020.Models.AOdbiorcy>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AMiejscowosc.AMiastaNazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AWojewodztwo.AWojewodztwoNazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AOdbiorcyKod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AOdbiorcyNazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AOdbiorcyNIP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AOdbiorcyUlicaNumerDomuLokalu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AOdbiorcyPoczta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AOdbiorcyKodPocztowy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AOdbiorcyTelefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AOdbiorcaEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AOdborcaUwagi)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AMiejscowosc.AMiastaNazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AWojewodztwo.AWojewodztwoNazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AOdbiorcyKod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AOdbiorcyNazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AOdbiorcyNIP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AOdbiorcyUlicaNumerDomuLokalu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AOdbiorcyPoczta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AOdbiorcyKodPocztowy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AOdbiorcyTelefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AOdbiorcaEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AOdborcaUwagi)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AOdbiorcyID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AOdbiorcyID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AOdbiorcyID })
+        </td>
+    </tr>
+}
+
+</table>

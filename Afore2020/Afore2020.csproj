@@ -169,16 +169,77 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AInwerteriesController.cs" />
+    <Compile Include="Controllers\AKartaWyjazdusController.cs" />
+    <Compile Include="Controllers\AOdbiorciesController.cs" />
+    <Compile Include="Controllers\ASerwisancisController.cs" />
+    <Compile Include="Controllers\AuxiliaryFunction.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImportEx.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Test2Controller.cs" />
+    <Compile Include="Controllers\ZdjeciaKartiesController.cs" />
     <Compile Include="DAL\AforeContext.cs" />
+    <Compile Include="DAL\AforeInicjalizacja.cs" />
+    <Compile Include="DAL\OgniwoContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="InneClassy\FileExt.cs" />
+    <Compile Include="Migrations\202002101808547_miesjcowsoci.cs" />
+    <Compile Include="Migrations\202002101808547_miesjcowsoci.designer.cs">
+      <DependentUpon>202002101808547_miesjcowsoci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002101840121_miesjcowsoci1.cs" />
+    <Compile Include="Migrations\202002101840121_miesjcowsoci1.designer.cs">
+      <DependentUpon>202002101840121_miesjcowsoci1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002110750010_serwisanci.cs" />
+    <Compile Include="Migrations\202002110750010_serwisanci.designer.cs">
+      <DependentUpon>202002110750010_serwisanci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002110752113_serwisanci1.cs" />
+    <Compile Include="Migrations\202002110752113_serwisanci1.designer.cs">
+      <DependentUpon>202002110752113_serwisanci1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002110817345_inwertery.cs" />
+    <Compile Include="Migrations\202002110817345_inwertery.designer.cs">
+      <DependentUpon>202002110817345_inwertery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002110847570_akartawyjazdu.cs" />
+    <Compile Include="Migrations\202002110847570_akartawyjazdu.designer.cs">
+      <DependentUpon>202002110847570_akartawyjazdu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002110904590_akartawyjazdu1.cs" />
+    <Compile Include="Migrations\202002110904590_akartawyjazdu1.designer.cs">
+      <DependentUpon>202002110904590_akartawyjazdu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002151419333_zdjecia1.cs" />
+    <Compile Include="Migrations\202002151419333_zdjecia1.designer.cs">
+      <DependentUpon>202002151419333_zdjecia1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002181443128_AOdbiorca1.cs" />
+    <Compile Include="Migrations\202002181443128_AOdbiorca1.designer.cs">
+      <DependentUpon>202002181443128_AOdbiorca1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002182255142_AOdbiorca2.cs" />
+    <Compile Include="Migrations\202002182255142_AOdbiorca2.designer.cs">
+      <DependentUpon>202002182255142_AOdbiorca2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AInwertery.cs" />
+    <Compile Include="Models\AKartaWyjazdu.cs" />
+    <Compile Include="Models\AMiasta.cs" />
+    <Compile Include="Models\AOdbiorcy.cs" />
+    <Compile Include="Models\ASerwisanci.cs" />
     <Compile Include="Models\AWojewodztwo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ImportExcel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Miejscowosc.cs" />
+    <Compile Include="Models\Wojewodztwo.cs" />
+    <Compile Include="Models\ZdjeciaKarty.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -191,8 +252,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="wwwroot\css\AKartaWyjazdus\Create.css" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -238,9 +302,37 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\ASerwisancis\Create.cshtml" />
+    <Content Include="Views\ASerwisancis\Delete.cshtml" />
+    <Content Include="Views\ASerwisancis\Details.cshtml" />
+    <Content Include="Views\ASerwisancis\Edit.cshtml" />
+    <Content Include="Views\ASerwisancis\Index.cshtml" />
+    <Content Include="Views\AInwerteries\Create.cshtml" />
+    <Content Include="Views\AInwerteries\Delete.cshtml" />
+    <Content Include="Views\AInwerteries\Details.cshtml" />
+    <Content Include="Views\AInwerteries\Edit.cshtml" />
+    <Content Include="Views\AInwerteries\Index.cshtml" />
+    <Content Include="Views\AKartaWyjazdus\Create.cshtml" />
+    <Content Include="Views\AKartaWyjazdus\Delete.cshtml" />
+    <Content Include="Views\AKartaWyjazdus\Details.cshtml" />
+    <Content Include="Views\AKartaWyjazdus\Edit.cshtml" />
+    <Content Include="Views\AKartaWyjazdus\Index.cshtml" />
+    <Content Include="Views\ZdjeciaKarties\Create.cshtml" />
+    <Content Include="Views\ZdjeciaKarties\Delete.cshtml" />
+    <Content Include="Views\ZdjeciaKarties\Details.cshtml" />
+    <Content Include="Views\ZdjeciaKarties\Edit.cshtml" />
+    <Content Include="Views\ZdjeciaKarties\Index.cshtml" />
+    <Content Include="Views\AOdbiorcies\Create.cshtml" />
+    <Content Include="Views\AOdbiorcies\Delete.cshtml" />
+    <Content Include="Views\AOdbiorcies\Details.cshtml" />
+    <Content Include="Views\AOdbiorcies\Edit.cshtml" />
+    <Content Include="Views\AOdbiorcies\Index.cshtml" />
+    <Content Include="Views\Test2\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Browsers\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Upload\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -254,6 +346,38 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202002101808547_miesjcowsoci.resx">
+      <DependentUpon>202002101808547_miesjcowsoci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002101840121_miesjcowsoci1.resx">
+      <DependentUpon>202002101840121_miesjcowsoci1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002110750010_serwisanci.resx">
+      <DependentUpon>202002110750010_serwisanci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002110752113_serwisanci1.resx">
+      <DependentUpon>202002110752113_serwisanci1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002110817345_inwertery.resx">
+      <DependentUpon>202002110817345_inwertery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002110847570_akartawyjazdu.resx">
+      <DependentUpon>202002110847570_akartawyjazdu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002110904590_akartawyjazdu1.resx">
+      <DependentUpon>202002110904590_akartawyjazdu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002151419333_zdjecia1.resx">
+      <DependentUpon>202002151419333_zdjecia1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002181443128_AOdbiorca1.resx">
+      <DependentUpon>202002181443128_AOdbiorca1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002182255142_AOdbiorca2.resx">
+      <DependentUpon>202002182255142_AOdbiorca2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

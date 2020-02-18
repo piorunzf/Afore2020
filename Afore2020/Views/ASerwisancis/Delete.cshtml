@@ -1,0 +1,97 @@
+﻿@model Afore2020.Models.ASerwisanci
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ASerwisanci</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciImię)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciImię)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciNazwisko)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciNazwisko)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciTelefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciTelefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciOpis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciOpis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciAktywny)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciAktywny)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciDataTworzenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciDataTworzenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciOperatorTw)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciOperatorTw)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciDatamodyfikacji)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciDatamodyfikacji)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciOperatorMd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciOperatorMd)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,113 @@
+﻿@model Afore2020.Models.AOdbiorcy
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AOdbiorcy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AMiejscowosc.AMiastaNazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMiejscowosc.AMiastaNazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AWojewodztwo.AWojewodztwoNazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AWojewodztwo.AWojewodztwoNazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOdbiorcyKod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOdbiorcyKod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOdbiorcyNazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOdbiorcyNazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOdbiorcyNIP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOdbiorcyNIP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduUlicaNumerDomuLokalu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduUlicaNumerDomuLokalu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOdbiorcyPoczta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOdbiorcyPoczta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOdbiorcyKodPocztowy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOdbiorcyKodPocztowy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOdbiorcyTelefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOdbiorcyTelefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOdbiorcaEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOdbiorcaEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AOdborcaUwagi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AOdborcaUwagi)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Afore2020.Models.ZdjeciaKarty>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ZdjeciaKartyNazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZdjeciaKartyOpis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZdjeciaKartyZdjecie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZdjeciaKartyDataTworzenia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZdjeciaKartyOperatorTw)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZdjeciaKartyDatamodyfikacji)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ZdjeciaKartyOperatorMd)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZdjeciaKartyNazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZdjeciaKartyOpis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZdjeciaKartyZdjecie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZdjeciaKartyDataTworzenia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZdjeciaKartyOperatorTw)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZdjeciaKartyDatamodyfikacji)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZdjeciaKartyOperatorMd)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ZdjeciaKartyID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ZdjeciaKartyID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ZdjeciaKartyID })
+        </td>
+    </tr>
+}
+
+</table>

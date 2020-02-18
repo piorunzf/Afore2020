@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Afore2020.Models.AInwertery>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AInwerteryModelInwentera)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AInwerteryOpis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AInwerteryAktywny)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AInwerteryDataTworzenia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AInwerteryiOperatorTw)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AInwerteryDatamodyfikacji)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AInwerteryOperatorMd)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AInwerteryModelInwentera)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AInwerteryOpis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AInwerteryAktywny)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AInwerteryDataTworzenia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AInwerteryiOperatorTw)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AInwerteryDatamodyfikacji)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AInwerteryOperatorMd)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AInwerteryID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AInwerteryID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AInwerteryID })
+        </td>
+    </tr>
+}
+
+</table>

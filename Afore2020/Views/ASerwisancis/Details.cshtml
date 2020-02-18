@@ -1,0 +1,91 @@
+﻿@model Afore2020.Models.ASerwisanci
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ASerwisanci</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciImię)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciImię)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciNazwisko)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciNazwisko)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciTelefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciTelefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciOpis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciOpis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciAktywny)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciAktywny)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciDataTworzenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciDataTworzenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciOperatorTw)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciOperatorTw)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciDatamodyfikacji)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciDatamodyfikacji)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanciOperatorMd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanciOperatorMd)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ASerwisanciID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

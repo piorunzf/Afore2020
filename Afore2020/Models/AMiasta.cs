@@ -6,21 +6,25 @@ using System.Web;
 
 namespace Afore2020.Models
 {
-    public class AWojewodztwo
+    public class AMiasta
     {
-
         [Key]
+        public int AMiastaID { get; set; }
+
+
         public int AWojewodztwoID { get; set; }
 
+
         [StringLength(70)]
-        [Display(Name = "Nazwa województwa")]
+        [Display(Name = "Nazwa miejscowosci")]
 
-        public string AWojewodztwoNazwa { get; set; }
+        public string AMiastaNazwa { get; set; }
 
-        public virtual ICollection<AWojewodztwo> AWojewodztwos { get; set; }
+        public virtual AWojewodztwo AWojewodztwo { get; set; }
         public virtual ICollection<AKartaWyjazdu> AKartaWyjazdus { get; set; }
         public virtual ICollection<AOdbiorcy> AOdbiorcies { get; set; }
 
-
     }
+
+
 }

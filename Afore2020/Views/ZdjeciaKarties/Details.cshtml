@@ -1,0 +1,83 @@
+﻿@model Afore2020.Models.ZdjeciaKarty
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ZdjeciaKarty</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ZdjeciaKartyNazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZdjeciaKartyNazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZdjeciaKartyOpis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZdjeciaKartyOpis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZdjeciaKartyZdjecie)
+        </dt>
+
+        <dd>
+            @if (Model.ZdjeciaKartyZdjecie.Any()
+            {
+            <dt>
+                Avatar
+            </dt>
+            <dd>
+                <img src="~/File?id=@Model.ZdjeciaKartyZdjecie.First()" alt="avatar" />
+            
+        }
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ZdjeciaKartyDataTworzenia)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ZdjeciaKartyDataTworzenia)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ZdjeciaKartyOperatorTw)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ZdjeciaKartyOperatorTw)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ZdjeciaKartyDatamodyfikacji)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ZdjeciaKartyDatamodyfikacji)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ZdjeciaKartyOperatorMd)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ZdjeciaKartyOperatorMd)
+            </dd>
+
+        </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ZdjeciaKartyID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

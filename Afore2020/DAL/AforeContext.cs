@@ -14,6 +14,10 @@ namespace Afore2020.DAL
             {
             }
 
+        static AforeContext()
+        {
+            Database.SetInitializer<AforeContext>(new AforeInicjalizacja());
+        }
 
         //usowa s na koncach wtorzonych tabelach
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -23,7 +27,20 @@ namespace Afore2020.DAL
         }
 
 
-        public DbSet<AWojewodztwo>  wojewodztwos { get; set; }
+        public DbSet<AWojewodztwo> AWojewodztwoes { get; set; }
 
+        public DbSet<AMiasta> AMiastas { get; set; }
+
+        public DbSet<ASerwisanci> ASerwisancis { get; set; }
+
+        public DbSet<AInwertery> AInwerteries { get; set; }
+
+        public DbSet<AKartaWyjazdu> AKartaWyjazdus { get; set; }
+
+        public DbSet<ZdjeciaKarty> ZdjeciaKarties { get; set; }
+
+        public System.Data.Entity.DbSet<Afore2020.Models.AOdbiorcy> AOdbiorcies { get; set; }
+
+       
     }
 }

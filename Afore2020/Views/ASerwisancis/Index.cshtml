@@ -1,0 +1,82 @@
+﻿@model IEnumerable<Afore2020.Models.ASerwisanci>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ASerwisanciImię)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ASerwisanciNazwisko)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ASerwisanciTelefon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ASerwisanciOpis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ASerwisanciAktywny)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ASerwisanciDataTworzenia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ASerwisanciOperatorTw)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ASerwisanciDatamodyfikacji)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ASerwisanciOperatorMd)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASerwisanciImię)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASerwisanciNazwisko)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASerwisanciTelefon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASerwisanciOpis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASerwisanciAktywny)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASerwisanciDataTworzenia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASerwisanciOperatorTw)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASerwisanciDatamodyfikacji)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASerwisanciOperatorMd)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ASerwisanciID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ASerwisanciID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ASerwisanciID })
+        </td>
+    </tr>
+}
+
+</table>

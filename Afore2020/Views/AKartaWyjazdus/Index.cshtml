@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Afore2020.Models.AKartaWyjazdu>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduNrWyjazdu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduDataWizyty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ASerwisanci.ASerwisanciImię)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AInwertera.AInwerteryModelInwentera)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduImieNazwisko)
+        </th>
+       <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AKartaWyjazduNrWyjazdu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AKartaWyjazduDataWizyty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ASerwisanci.ASerwisanciImię)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AInwertera.AInwerteryModelInwentera)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AKartaWyjazduImieNazwisko)
+        </td>
+       
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.AKartaWyjazduID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.AKartaWyjazduID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.AKartaWyjazduID })
+        </td>
+    </tr>
+}
+
+</table>

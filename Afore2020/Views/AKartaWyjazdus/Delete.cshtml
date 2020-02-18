@@ -1,0 +1,345 @@
+﻿@model Afore2020.Models.AKartaWyjazdu
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AKartaWyjazdu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AInwertera.AInwerteryModelInwentera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AInwertera.AInwerteryModelInwentera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AMiejscowosc.AMiastaNazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AMiejscowosc.AMiastaNazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ASerwisanci.ASerwisanciImię)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ASerwisanci.ASerwisanciImię)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AWojewodztwo.AWojewodztwoNazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AWojewodztwo.AWojewodztwoNazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduDataWizyty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduDataWizyty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduNrWyjazdu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduNrWyjazdu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduImieNazwisko)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduImieNazwisko)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduUlicaNumerDomuLokalu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduUlicaNumerDomuLokalu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduPoczta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduPoczta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduKodPocztowy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduKodPocztowy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduTelefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduTelefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduTelefon2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduTelefon2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduNumerInwertera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduNumerInwertera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduNumerWifi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduNumerWifi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduOnLine)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduOnLine)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduPV1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduPV1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduPV1LiczbaPaneli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduPV1LiczbaPaneli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduPV1Kierunek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduPV1Kierunek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduPV2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduPV2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduPV2LiczbaPaneli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduPV2LiczbaPaneli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduPV2Kierunek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduPV2Kierunek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduPV3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduPV3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduPV3LiczbaPaneli)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduPV3LiczbaPaneli)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduPV3Kierunek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduPV3Kierunek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduKodyBledow)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduKodyBledow)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduSofty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduSofty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduNoramPanstwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduNoramPanstwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduOgranicznikPrzepiecAC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduOgranicznikPrzepiecAC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduOgranicznikPrzepiecDC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduOgranicznikPrzepiecDC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduBezpiecznikAC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduBezpiecznikAC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduBezpiecznikDC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduBezpiecznikDC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduUziemienieInwertera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduUziemienieInwertera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduLoginKlienta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduLoginKlienta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduHasloKlienta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduHasloKlienta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduSpostrzezenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduSpostrzezenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduDzialania)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduDzialania)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduDataTworzenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduDataTworzenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduOperatorTw)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduOperatorTw)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduDatamodyfikacji)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduDatamodyfikacji)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AKartaWyjazduOperatorMd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AKartaWyjazduOperatorMd)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

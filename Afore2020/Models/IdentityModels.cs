@@ -21,7 +21,7 @@ namespace Afore2020.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("AforeBaza", throwIfV1Schema: false)
         {
         }
 

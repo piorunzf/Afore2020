@@ -1,0 +1,317 @@
+﻿@model Afore2020.Models.AKartaWyjazdu
+
+@{
+    ViewBag.Title = "Create";
+   // Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div>
+    <table width="842" border="0">
+        <tr>
+            <td width="74" height="20">ID wyjazdu</td>
+            <td width="84">&nbsp;</td>
+            <td width="88" , align="center">Nr.wyjazdu</td>
+            <td width="120">
+
+                @Html.EditorFor(model => model.AKartaWyjazduNrWyjazdu, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduNrWyjazdu, "", new { @class = "text-danger" })
+
+            </td>
+            <td width="105" , align="center">Data wyjazd</td>
+            <td width="89">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                @Html.EditorFor(model => model.AKartaWyjazduDataWizyty, new { htmlAttributes = new { @class = "form-control input-sm", style = "width=150" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduDataWizyty, "", new { @class = "text-danger" })
+
+            </td>
+            <td width="89" , align="center">Serwisant</td>
+            <td width="203">
+
+                @Html.DropDownList("ASerwisanciID", null, htmlAttributes: new { @class = "form-control input-sm" })
+                @Html.ValidationMessageFor(model => model.ASerwisanciID, "", new { @class = "text-danger" })
+
+            </td>
+        </tr>
+    </table>
+
+    <hr />
+
+    <table width="1042" border="0">
+        <tr>
+            <td width="110" height="30">Imię i nazwisko zgłasającego</td>
+            <td width="300">
+                @Html.EditorFor(model => model.AKartaWyjazduImieNazwisko, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduImieNazwisko, "", new { @class = "text-danger" })
+            </td>
+            <td width="100" , align="center">Miasto Miejscowość</td>
+            <td width="250">
+                @Html.DropDownList("AMiastaID", null, htmlAttributes: new { @class = "form-control input-sm" })
+                @Html.ValidationMessageFor(model => model.AMiastaID, "", new { @class = "text-danger" })
+            </td>
+            <td width="150" align="center">Ulica i numer domu (lokalu) </td>
+            <td width="350">
+                @Html.EditorFor(model => model.AKartaWyjazduUlicaNumerDomuLokalu, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduUlicaNumerDomuLokalu, "", new { @class = "text-danger" })
+            </td>
+           
+        </tr>
+    </table>
+    <table width="1042" border="0">
+        <tr>
+            <td width="50" height="40">Kod pocztowy</td>
+            <td width="70">
+                @Html.EditorFor(model => model.AKartaWyjazduKodPocztowy, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduKodPocztowy, "", new { @class = "text-danger" })
+            </td>
+            <td width="40" align="center">Poczta</td>
+            <td width="120">
+                @Html.EditorFor(model => model.AKartaWyjazduPoczta, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduPoczta, "", new { @class = "text-danger" })
+            </td>
+            <td width="80" align="center">Województwo</td>
+            <td width="150">
+                @Html.DropDownList("AWojewodztwoID", null, htmlAttributes: new { @class = "form-control input-sm" })
+                @Html.ValidationMessageFor(model => model.AWojewodztwoID, "", new { @class = "text-danger" })
+            </td>
+
+        </tr>
+    </table>
+    <table width="942" border="0">
+        <tr>
+            <td width="60" height="30">Numer telefonu podstawowy</td>
+            <td width="100">
+                @Html.EditorFor(model => model.AKartaWyjazduTelefon, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduTelefon, "", new { @class = "text-danger" })
+            </td>
+            <td width="60" , align="center">Numer telefonu alternatywny</td>
+            <td width="100">
+                @Html.EditorFor(model => model.AKartaWyjazduTelefon2, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduTelefon2, "", new { @class = "text-danger" })
+            </td>
+
+        </tr>
+    </table>
+    <hr />
+    <table width="402" border="0">
+        <tr>
+            <td width="74" height="40">Model inwertera</td>
+            <td width="150">
+                @Html.DropDownList("AInwerteryID", null, htmlAttributes: new { @class = "form-control input-sm" })
+                @Html.ValidationMessageFor(model => model.AInwerteryID, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+    </table>
+    <table width="742" border="0">
+        <tr>
+            <td width="74" height="30">Numer inwertera</td>
+            <td width="154">
+                @Html.EditorFor(model => model.AKartaWyjazduNumerInwertera, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduNumerInwertera, "", new { @class = "text-danger" })
+            </td>
+            <td width="12" align="center">Nr.WIFI</td>
+            <td width="160">
+                @Html.EditorFor(model => model.AKartaWyjazduNumerWifi, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduNumerWifi, "", new { @class = "text-danger" })
+            </td>
+            <td width="45">
+                On LINE
+                @Html.EditorFor(model => model.AKartaWyjazduOnLine)
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduOnLine, "", new { @class = "text-danger" })
+            </td>
+
+        </tr>
+    </table>
+
+    <hr />
+
+
+    <table width="1042" border="0">
+        <tr>
+            <td width="74" height="40">PV 1 (MPPT 1)</td>
+            <td width="50">
+                @Html.EditorFor(model => model.AKartaWyjazduPV1, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduPV1, "", new { @class = "text-danger" })
+            </td>
+            <td width="74" , align="center">PV 2 (MPPT 2)</td>
+            <td width="50">
+                @Html.EditorFor(model => model.AKartaWyjazduPV2, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduPV2, "", new { @class = "text-danger" })
+
+            </td>
+            <td width="74" align="center">PV 3 (MPPT 3)</td>
+            <td width="50">
+                @Html.EditorFor(model => model.AKartaWyjazduPV3, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduPV3, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td width="74" height="40">Liczba paneli</td>
+            <td width="50">
+                @Html.EditorFor(model => model.AKartaWyjazduPV1LiczbaPaneli, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduPV1LiczbaPaneli, "", new { @class = "text-danger" })
+            </td>
+            <td width="74" , align="center">Liczba paneli</td>
+            <td width="50">
+                @Html.EditorFor(model => model.AKartaWyjazduPV2LiczbaPaneli, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduPV2LiczbaPaneli, "", new { @class = "text-danger" })
+
+            </td>
+            <td width="74" align="center">Liczba paneli</td>
+            <td width="50">
+                @Html.EditorFor(model => model.AKartaWyjazduPV3LiczbaPaneli, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduPV3LiczbaPaneli, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td width="74" height="40">Kierunek</td>
+            <td width="50">
+                @Html.EditorFor(model => model.AKartaWyjazduPV1Kierunek, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduPV1Kierunek, "", new { @class = "text-danger" })
+            </td>
+            <td width="74" , align="center">Kierunek</td>
+            <td width="50">
+                @Html.EditorFor(model => model.AKartaWyjazduPV2Kierunek, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduPV2Kierunek, "", new { @class = "text-danger" })
+
+            </td>
+            <td width="74" align="center">Kierunek</td>
+            <td width="50">
+                @Html.EditorFor(model => model.AKartaWyjazduPV3Kierunek, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduPV3Kierunek, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+    </table>
+    <hr />
+    <table width="1042" border="0">
+        <tr>
+            <td width="74" height="30">Kod błedu</td>
+            <td width="124">
+                @Html.EditorFor(model => model.AKartaWyjazduKodyBledow, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduKodyBledow, "", new { @class = "text-danger" })
+            </td>
+            <td width="150">Softy: Matherboard / Displayboard </td>
+            <td width="160">
+                @Html.EditorFor(model => model.AKartaWyjazduSofty, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduSofty, "", new { @class = "text-danger" })
+            </td>
+            <td width="70">Norma-Państwo</td>
+            <td width="115">
+                @Html.EditorFor(model => model.AKartaWyjazduNoramPanstwo, new { htmlAttributes = new { @class = "form-control input-sm" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduNoramPanstwo, "", new { @class = "text-danger" })
+            </td>
+
+        </tr>
+    </table>
+    <hr />
+    <table width="1042" border="0">
+        <tr>
+            <td width="100" height="30">
+                Ograniczenie przpieć AC
+                @Html.EditorFor(model => model.AKartaWyjazduOgranicznikPrzepiecAC)
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduOgranicznikPrzepiecAC, "", new { @class = "text-danger" })
+            </td>
+            <td width="100">
+                Ograniczenie przepieć DC
+                @Html.EditorFor(model => model.AKartaWyjazduOgranicznikPrzepiecDC)
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduOgranicznikPrzepiecDC, "", new { @class = "text-danger" })
+            </td>
+            <td width="100">
+                Bezpiecznik AC
+                @Html.EditorFor(model => model.AKartaWyjazduBezpiecznikAC)
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduBezpiecznikAC, "", new { @class = "text-danger" })
+            </td>
+            <td width="100">
+                Bezpiecznik DC
+                @Html.EditorFor(model => model.AKartaWyjazduBezpiecznikDC)
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduBezpiecznikDC, "", new { @class = "text-danger" })
+            </td>
+            <td width="100">
+                Uziemienie inwertera
+                @Html.EditorFor(model => model.AKartaWyjazduUziemienieInwertera)
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduUziemienieInwertera, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+    </table>
+    <hr />
+    <table width="942" border="0">
+        <tr>
+            <td width="104" height="30">Login - Email klienta</td>
+            <td width="184">
+                @Html.EditorFor(model => model.AKartaWyjazduLoginKlienta, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduLoginKlienta, "", new { @class = "text-danger" })
+            </td>
+            <td width="128">Hasło (wykonać konfigurację modułu WIFI na miejscu)</td>
+            <td width="100">
+                @Html.EditorFor(model => model.AKartaWyjazduHasloKlienta, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduHasloKlienta, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+    </table>
+    <table width="942" border="0">
+        <tr>
+            <td width="200" height="30">UWAGI -spostrzeżenia </td>
+            <td width="304">
+                @Html.EditorFor(model => model.AKartaWyjazduSpostrzezenia, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduSpostrzezenia, "", new { @class = "text-danger" })
+            </td>
+            <td width="200" height="30">Działanie </td>
+            <td width="304">
+                @Html.EditorFor(model => model.AKartaWyjazduDzialania, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduDzialania, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+    </table>
+    <hr />
+    <table width="642" border="0">
+        <tr>
+            <td width="100" height="30">Data dodania wpisu:</td>
+            <td width="100">
+                @Html.EditorFor(model => model.AKartaWyjazduDataTworzenia, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduDataTworzenia, "", new { @class = "text-danger" })
+            </td>
+            <td width="128">Operator dodajacy wpis:</td>
+            <td width="100">
+                @Html.DisplayFor(model => model.AKartaWyjazduOperatorTw, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduOperatorTw, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+        <tr>
+            <td width="100" height="30">Data modyfikacji wpisu: </td>
+            <td width="100">
+                @Html.EditorFor(model => model.AKartaWyjazduDatamodyfikacji, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduDatamodyfikacji, "", new { @class = "text-danger" })
+            </td>
+            <td width="128">Operator modyfikacji wpis: </td>
+            <td width="100">
+                @Html.DisplayFor(model => model.AKartaWyjazduOperatorMd, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AKartaWyjazduOperatorMd, "", new { @class = "text-danger" })
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+<div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

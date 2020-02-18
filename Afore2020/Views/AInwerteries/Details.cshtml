@@ -1,0 +1,75 @@
+﻿@model Afore2020.Models.AInwertery
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AInwertery</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AInwerteryModelInwentera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AInwerteryModelInwentera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AInwerteryOpis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AInwerteryOpis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AInwerteryAktywny)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AInwerteryAktywny)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AInwerteryDataTworzenia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AInwerteryDataTworzenia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AInwerteryiOperatorTw)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AInwerteryiOperatorTw)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AInwerteryDatamodyfikacji)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AInwerteryDatamodyfikacji)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AInwerteryOperatorMd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AInwerteryOperatorMd)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AInwerteryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
